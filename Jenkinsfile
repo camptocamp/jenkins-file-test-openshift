@@ -16,12 +16,11 @@ dockerBuild {
         println i
     }
 
-    def SKIP_TLS=true
-
-    openshiftBuild(
-      buildConfig: 'frontend',
-      namespace: 'ms-ocpappdev',
-      apiURL: 'https://master.dach.openshift.opentlc.com',
-    )
-
+    withEnv(["SKIP_TLS=true"]) {
+      openshiftBuild(
+        buildConfig: 'frontend',
+        namespace: 'ms-ocpappdev',
+        apiURL: 'https://master.dach.openshift.opentlc.com',
+      )
+    }
 }
