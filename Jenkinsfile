@@ -15,4 +15,11 @@ dockerBuild {
     for (String i : readFile('env.txt').split("\r?\n")) {
         println i
     }
+
+    openshiftBuild(
+      buildConfig: 'frontend',
+      namespace: 'ms-ocpappdev',
+      apiURL: 'https://master.dach.openshift.opentlc.com'
+    )
+
 }
