@@ -21,6 +21,7 @@ dockerBuild {
         buildConfig: 'frontend',
         namespace: 'ms-ocpappdev',
         apiURL: 'https://master.dach.openshift.opentlc.com',
+        authToken: 'openshift-lab'
       )
     }
 }
