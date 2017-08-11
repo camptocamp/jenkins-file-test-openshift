@@ -1,7 +1,7 @@
 #!/usr/bin/groovy
 
-// Load shared library
-@Library('github.com/camptocamp/c2c-pipeline-library@master') import static com.camptocamp.utils.*
+// // Load shared library
+// @Library('github.com/camptocamp/c2c-pipeline-library@master') import static com.camptocamp.utils.*
 
 pipeline {
   agent {
